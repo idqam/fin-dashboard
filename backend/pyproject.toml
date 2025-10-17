@@ -1,0 +1,42 @@
+[project]
+name = "finance-dashboard-backend"
+version = "0.1.0"
+description = "FastAPI backend for finance dashboard"
+authors = [
+    {name = "Owen Villareal"}
+]
+readme = "README.md"
+requires-python = "^3.11"
+dependencies = [
+    "fastapi (>=0.119.0,<0.120.0)",
+    "uvicorn[standard] (>=0.37.0,<0.38.0)",
+    "sqlalchemy (>=2.0.44,<3.0.0)",
+    "psycopg2-binary (>=2.9.11,<3.0.0)",
+    "alembic (>=1.17.0,<2.0.0)",
+    "pydantic-settings (>=2.11.0,<3.0.0)",
+    "python-dotenv (>=1.1.1,<2.0.0)",
+    "passlib[bcrypt] (>=1.7.4,<2.0.0)",
+    "python-jose[cryptography] (>=3.5.0,<4.0.0)",
+    "redis (>=6.4.0,<7.0.0)",
+    "celery (>=5.5.3,<6.0.0)",
+    "aiokafka (>=0.12.0,<0.13.0)",
+    "websockets (>=15.0.1,<16.0.0)",
+    "openai (>=2.4.0,<3.0.0)",
+    "pandas (>=2.3.3,<3.0.0)",
+    "plotly (>=6.3.1,<7.0.0)",
+    "httpx (>=0.28.1,<0.29.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=8.4.2,<9.0.0)",
+    "pytest-asyncio (>=1.2.0,<2.0.0)",
+    "black (>=25.9.0,<26.0.0)",
+    "isort (>=7.0.0,<8.0.0)",
+    "mypy (>=1.18.2,<2.0.0)"
+]
